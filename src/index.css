@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .max-width {
+    width: 1440px;
+    margin: 0;
+  }
+
+}
+@layer utilities {
+  .border {
+    @apply border-purple-600 border-2
+  }
+  .responsive {
+    @apply max-sm:w-[90%] max-md:w-[70%] max-lg:w-[60%]
+  }
+  .hover-icon {
+    @apply text-gray-500 transition-colors duration-100 ease-in-out;
+  }
+  .hover-icon:hover {
+    @apply text-green-500
+  }
+  .hover-icon:hover:nth-child(2) {
+    @apply  text-blue-500
+  }
+  .hover-icon:hover:nth-child(3) {
+    @apply  text-red-500
+  }
+  #completed {
+    @apply line-through text-green-600 
+  }
+  .tooltip {
+    @apply bg-gray-500 px-2 py-1 text-[8px] text-white rounded-md
+  }
+}
